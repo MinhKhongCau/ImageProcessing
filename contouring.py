@@ -17,7 +17,10 @@ def bit_slicing(image):
     
     for bit in range(8, 0, -1):
         q_img = quantize_bits(img_gray, bit)
-        showImage(f"Bit processing {bit}", q_img)
+
+        cv2.imshow(f'Image ${bit+1} bit', q_img)
+       
+    showImage('origin image ', img_gray)
         
 def showImage(window_name, img):
     print('shape', img.shape)
